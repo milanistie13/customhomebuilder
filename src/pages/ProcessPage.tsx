@@ -1,4 +1,5 @@
 import { CheckCircle, Clock, Users, FileText, Building, Home, Award, Phone } from 'lucide-react'
+import { SEO } from '../components/SEO'
 
 const processSteps = [
   {
@@ -102,6 +103,13 @@ const testimonials = [
 export function ProcessPage() {
   return (
     <div className="bg-white">
+      <SEO 
+        title="Our Building Process - Custom Home Construction Steps | Austin, TX"
+        description="Learn about our proven 5-step custom home building process in Austin, TX. From initial consultation to final walkthrough, discover how we bring your dream home to life."
+        keywords="custom home building process Austin TX, home construction steps, building timeline, construction process, home building phases"
+        ogTitle="Our Building Process - Custom Home Construction Steps | Austin, TX"
+        ogDescription="Learn about our proven 5-step custom home building process in Austin, TX. From initial consultation to final walkthrough, discover how we bring your dream home to life."
+      />
       {/* Hero Section */}
       <section className="relative hero-section bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         <div className="absolute inset-0 bg-black/50" />
@@ -302,10 +310,16 @@ export function ProcessPage() {
             Let's discuss your project and walk you through our proven process step by step.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white hover:bg-gray-100 text-primary-600 font-semibold py-4 px-8 rounded-lg transition-colors">
+            <button 
+              className="bg-white hover:bg-gray-100 text-primary-600 font-semibold py-4 px-8 rounded-lg transition-colors"
+              aria-label="Schedule a free consultation to discuss your custom home project"
+            >
               Schedule Consultation
             </button>
-            <button className="bg-transparent hover:bg-white/10 text-white font-semibold py-4 px-8 rounded-lg border border-white transition-colors">
+            <button 
+              className="bg-transparent hover:bg-white/10 text-white font-semibold py-4 px-8 rounded-lg border border-white transition-colors"
+              aria-label="Download our detailed process guide explaining each step of home building"
+            >
               Download Process Guide
             </button>
           </div>

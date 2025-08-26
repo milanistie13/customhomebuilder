@@ -1,4 +1,5 @@
 import { ArrowRight } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 // Import local images
 import lakeTravisImage from '../assets/images/featured/pexels-photo-106399.jpeg'
@@ -67,24 +68,26 @@ export function FeaturedProjects() {
                     </span>
                   ))}
                 </div>
-                <button 
+                <Link 
+                  to="/portfolio"
                   className="flex items-center gap-2 text-primary-500 font-medium hover:text-primary-600 transition-colors"
-                  aria-label={`View details for ${project.title} project`}
+                  aria-label={`View details for ${project.title} project in our portfolio`}
                 >
-                  View Project <ArrowRight size={18} />
-                </button>
+                  View Project Details <ArrowRight size={18} />
+                </Link>
               </div>
             </div>
           ))}
         </div>
 
         <div className="text-center mt-12">
-          <button 
+          <Link 
+            to="/portfolio"
             className="bg-primary-500 hover:bg-primary-600 text-white font-semibold py-3 px-8 rounded-lg inline-flex items-center gap-2 transition-colors"
             aria-label="View our complete portfolio of custom home projects"
           >
             View Full Portfolio
-          </button>
+          </Link>
         </div>
       </div>
     </section>

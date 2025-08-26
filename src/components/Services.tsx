@@ -115,7 +115,7 @@ export function Services() {
                   className="mt-8 w-full bg-primary-500 hover:bg-primary-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 inline-block text-center"
                   aria-label={`Learn more about ${service.title} services`}
                 >
-                  Learn More
+                  Learn more about {service.title}
                 </Link>
               </div>
             </div>

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { MapPin, Phone, Mail, Clock, MessageSquare, Send, CheckCircle, AlertCircle } from 'lucide-react'
+import { SEO } from '../components/SEO'
 
 interface ContactForm {
   firstName: string
@@ -48,8 +49,8 @@ const contactInfo = [
       "Austin, TX 78701",
       "United States"
     ],
-    action: "Get Directions",
-    actionLink: "#"
+    action: "Get Directions to Our Office",
+    actionLink: "https://maps.google.com/?q=1234+Custom+Home+Blvd+Austin+TX+78701"
   },
   {
     icon: Phone,
@@ -59,7 +60,7 @@ const contactInfo = [
       "Sales: (512) 555-1235",
       "Support: (512) 555-1236"
     ],
-    action: "Call Now",
+    action: "Call Our Office Now",
     actionLink: "tel:+15125551234"
   },
   {
@@ -70,7 +71,7 @@ const contactInfo = [
       "Sales: sales@austincustomhomes.com",
       "Support: support@austincustomhomes.com"
     ],
-    action: "Send Email",
+    action: "Send Us an Email",
     actionLink: "mailto:info@austincustomhomes.com"
   },
   {
@@ -81,8 +82,8 @@ const contactInfo = [
       "Saturday: 9:00 AM - 3:00 PM",
       "Sunday: Closed"
     ],
-    action: "Schedule Meeting",
-    actionLink: "#"
+    action: "Schedule a Meeting",
+    actionLink: "/contact"
   }
 ]
 
@@ -160,6 +161,13 @@ export function ContactPage() {
 
   return (
     <div className="bg-white">
+      <SEO
+        title="Contact Us - Austin Custom Homes | Get Your Free Consultation"
+        description="Get in touch with Austin Custom Homes for all your custom home building, remodeling, and design needs. We're here to help you turn your vision into reality."
+        keywords="contact Austin custom home builder, free consultation Austin TX, custom home builder contact, home construction quote Austin, remodeling consultation"
+        ogTitle="Contact Us - Austin Custom Homes | Get Your Free Consultation"
+        ogDescription="Get in touch with Austin Custom Homes for all your custom home building, remodeling, and design needs. We're here to help you turn your vision into reality."
+      />
       {/* Hero Section */}
       <section className="relative hero-section bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         <div className="absolute inset-0 bg-black/50" />
@@ -497,10 +505,16 @@ export function ContactPage() {
             the journey together.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white hover:bg-gray-100 text-primary-600 font-semibold py-4 px-8 rounded-lg transition-colors">
+            <button 
+              className="bg-white hover:bg-gray-100 text-primary-600 font-semibold py-4 px-8 rounded-lg transition-colors"
+              aria-label="Schedule a free consultation for your custom home project"
+            >
               Schedule Free Consultation
             </button>
-            <button className="bg-transparent hover:bg-white/10 text-white font-semibold py-4 px-8 rounded-lg border border-white transition-colors">
+            <button 
+              className="bg-transparent hover:bg-white/10 text-white font-semibold py-4 px-8 rounded-lg border border-white transition-colors"
+              aria-label="Download our company brochure with project examples and services"
+            >
               Download Brochure
             </button>
           </div>

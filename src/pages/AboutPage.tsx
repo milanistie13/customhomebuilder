@@ -1,3 +1,4 @@
+import { SEO } from '../components/SEO'
 import { Users, Award, MapPin, Phone, Mail, Clock, Star, CheckCircle, Building, Heart, Shield, Zap } from 'lucide-react'
 
 // Import images
@@ -125,6 +126,13 @@ const timeline = [
 export function AboutPage() {
   return (
     <div className="bg-white">
+      <SEO 
+        title="About Us - Custom Home Builder Austin, TX | 25+ Years of Excellence"
+        description="Learn about Austin Custom Homes - a trusted custom home builder with 25+ years of experience in Austin, TX. Discover our story, team, values, and commitment to quality craftsmanship."
+        keywords="about Austin custom home builder, custom home construction company Austin TX, home builder experience, Austin construction company, trusted home builder"
+        ogTitle="About Us - Custom Home Builder Austin, TX | 25+ Years of Excellence"
+        ogDescription="Learn about Austin Custom Homes - a trusted custom home builder with 25+ years of experience in Austin, TX. Discover our story, team, values, and commitment to quality craftsmanship."
+      />
       {/* Hero Section */}
       <section className="relative hero-section bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         <div className="absolute inset-0 bg-black/50" />
@@ -401,10 +409,16 @@ export function AboutPage() {
             passion and expertise that has made us Austin's trusted custom home builder.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white hover:bg-gray-100 text-primary-600 font-semibold py-4 px-8 rounded-lg transition-colors">
+            <button 
+              className="bg-white hover:bg-gray-100 text-primary-600 font-semibold py-4 px-8 rounded-lg transition-colors"
+              aria-label="Schedule a free consultation to discuss your custom home project"
+            >
               Schedule Consultation
             </button>
-            <button className="bg-transparent hover:bg-white/10 text-white font-semibold py-4 px-8 rounded-lg border border-white transition-colors">
+            <button 
+              className="bg-transparent hover:bg-white/10 text-white font-semibold py-4 px-8 rounded-lg border border-white transition-colors"
+              aria-label="Download our company profile with team information and company history"
+            >
               Download Company Profile
             </button>
           </div>

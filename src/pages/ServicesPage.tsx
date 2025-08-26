@@ -1,3 +1,4 @@
+import { SEO } from '../components/SEO'
 import { Building, Hammer, Ruler, Paintbrush, Wrench, Lightbulb, ArrowRight, CheckCircle } from 'lucide-react'
 
 // Import images
@@ -68,6 +69,13 @@ const services = [
 export function ServicesPage() {
   return (
     <div className="bg-white">
+      <SEO 
+        title="Custom Home Building Services - Austin, TX | Construction & Remodeling"
+        description="Comprehensive custom home building services in Austin, TX. From architectural design to smart home integration, we handle every aspect of your dream home project."
+        keywords="custom home building services Austin TX, home construction, architectural design, home remodeling, smart home integration, sustainable building"
+        ogTitle="Custom Home Building Services - Austin, TX | Construction & Remodeling"
+        ogDescription="Comprehensive custom home building services in Austin, TX. From architectural design to smart home integration, we handle every aspect of your dream home project."
+      />
       {/* Hero Section */}
       <section className="relative hero-section bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         <div className="absolute inset-0 bg-black/50" />
@@ -145,7 +153,10 @@ export function ServicesPage() {
                     </div>
                   </div>
                   
-                  <button className="w-full bg-primary-500 hover:bg-primary-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2">
+                  <button 
+                    className="w-full bg-primary-500 hover:bg-primary-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+                    aria-label={`Get a free quote for ${service.title} services`}
+                  >
                     <span>Get Quote</span>
                     <ArrowRight size={18} />
                   </button>
@@ -166,10 +177,16 @@ export function ServicesPage() {
             Let's discuss your vision and create a custom solution that exceeds your expectations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-primary-500 hover:bg-primary-600 text-white font-semibold py-4 px-8 rounded-lg transition-colors">
+            <button 
+              className="bg-primary-500 hover:bg-primary-600 text-white font-semibold py-4 px-8 rounded-lg transition-colors"
+              aria-label="Schedule a free consultation for your custom home project"
+            >
               Schedule Consultation
             </button>
-            <button className="bg-white hover:bg-gray-50 text-primary-500 font-semibold py-4 px-8 rounded-lg border border-primary-500 transition-colors">
+            <button 
+              className="bg-white hover:bg-gray-50 text-primary-500 font-semibold py-4 px-8 rounded-lg border border-primary-500 transition-colors"
+              aria-label="Download our company brochure with service details and pricing"
+            >
               Download Brochure
             </button>
           </div>

@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { ExternalLink, MapPin, Square, Bed, Bath, Expand, Filter, Grid, List } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import { SEO } from '../components/SEO'
 
 // Import images
 import portfolioImage1 from '../assets/images/portfolio/pexels-photo-106399.jpeg'
@@ -131,6 +133,13 @@ export function PortfolioPage() {
 
   return (
     <div className="bg-white">
+      <SEO
+        title="Our Portfolio - Custom Home Projects | Austin Custom Homes"
+        description="Explore our portfolio of custom homes, renovations, and architectural masterpieces in Austin, TX. Discover our commitment to quality, innovation, and client satisfaction."
+        keywords="custom home portfolio Austin TX, home construction projects, architectural design portfolio, luxury home examples, custom home gallery Austin"
+        ogTitle="Our Portfolio - Custom Home Projects | Austin Custom Homes"
+        ogDescription="Explore our portfolio of custom homes, renovations, and architectural masterpieces in Austin, TX. Discover our commitment to quality, innovation, and client satisfaction."
+      />
       {/* Hero Section */}
       <section className="relative hero-section bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         <div className="absolute inset-0 bg-black/50" />
@@ -366,10 +375,14 @@ export function PortfolioPage() {
                           <MapPin size={16} />
                           <span>{project.location}</span>
                         </div>
-                        <button className="text-primary-500 hover:text-primary-600 font-semibold flex items-center gap-2">
+                        <Link 
+                          to="/contact"
+                          className="text-primary-500 hover:text-primary-600 font-semibold flex items-center gap-2"
+                          aria-label={`Schedule a consultation for ${project.title} project`}
+                        >
                           View Details
                           <ExternalLink size={16} />
-                        </button>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -407,12 +420,20 @@ export function PortfolioPage() {
             Let's create something extraordinary together. Your dream home is just a conversation away.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-primary-500 hover:bg-primary-600 text-white font-semibold py-4 px-8 rounded-lg transition-colors">
+            <Link 
+              to="/contact"
+              className="bg-primary-500 hover:bg-primary-600 text-white font-semibold py-4 px-8 rounded-lg transition-colors"
+              aria-label="Start your custom home project with a free consultation"
+            >
               Start Your Project
-            </button>
-            <button className="bg-white hover:bg-gray-50 text-primary-500 font-semibold py-4 px-8 rounded-lg border border-primary-500 transition-colors">
+            </Link>
+            <Link 
+              to="/contact"
+              className="bg-white hover:bg-gray-50 text-primary-500 font-semibold py-4 px-8 rounded-lg border border-primary-500 transition-colors"
+              aria-label="Schedule a free consultation for your custom home project"
+            >
               Schedule Consultation
-            </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -463,9 +484,13 @@ export function PortfolioPage() {
                   <MapPin size={16} />
                   <span>{selectedProject.location}</span>
                 </div>
-                <button className="bg-primary-500 hover:bg-primary-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+                <Link 
+                  to="/contact"
+                  className="bg-primary-500 hover:bg-primary-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+                  aria-label={`Get a free quote for ${selectedProject.title} project`}
+                >
                   Get Quote
-                </button>
+                </Link>
               </div>
             </div>
           </div>

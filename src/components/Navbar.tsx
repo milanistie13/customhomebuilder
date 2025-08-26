@@ -12,7 +12,7 @@ export function Navbar() {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-2" aria-label="SummitHomes - Custom Home Builder in Austin, TX">
             <Home className="text-primary-500" size={28} />
             <span className="text-2xl font-bold text-gray-900">SummitHomes</span>
           </Link>
