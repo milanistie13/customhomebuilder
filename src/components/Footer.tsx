@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -48,10 +49,10 @@ export const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li><a href="#services" className="text-gray-400 hover:text-white transition-colors">Services</a></li>
-              <li><a href="#portfolio" className="text-gray-400 hover:text-white transition-colors">Portfolio</a></li>
-              <li><a href="#about" className="text-gray-400 hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#contact" className="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+              <li><Link to="/services" className="text-gray-400 hover:text-white transition-colors">Services</Link></li>
+              <li><Link to="/portfolio" className="text-gray-400 hover:text-white transition-colors">Portfolio</Link></li>
+              <li><Link to="/about" className="text-gray-400 hover:text-white transition-colors">About Us</Link></li>
+              <li><Link to="/contact" className="text-gray-400 hover:text-white transition-colors">Contact</Link></li>
             </ul>
           </div>
 
@@ -59,10 +60,10 @@ export const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Our Services</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Custom Home Construction</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Home Remodeling</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Architectural Design</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Interior Finishing</a></li>
+              <li><Link to="/services" className="text-gray-400 hover:text-white transition-colors">Custom Home Construction</Link></li>
+              <li><Link to="/services" className="text-gray-400 hover:text-white transition-colors">Home Remodeling</Link></li>
+              <li><Link to="/services" className="text-gray-400 hover:text-white transition-colors">Architectural Design</Link></li>
+              <li><Link to="/services" className="text-gray-400 hover:text-white transition-colors">Interior Finishing</Link></li>
             </ul>
           </div>
         </div>

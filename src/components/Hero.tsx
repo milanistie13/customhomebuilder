@@ -1,4 +1,5 @@
 import { ArrowRight, Home, Star, Award, Users, MapPin, ChevronDown } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 export function Hero() {
   return (
@@ -54,15 +55,17 @@ export function Hero() {
             
             {/* CTA buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <button 
+              <Link 
+                to="/contact"
                 className="group bg-gradient-to-r from-primary-500 to-blue-600 hover:from-primary-600 hover:to-blue-700 text-white font-semibold py-5 px-8 rounded-xl flex items-center gap-3 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-primary-500/25"
                 aria-label="Request a free consultation for your custom home project"
               >
                 <span>Start Your Journey</span>
                 <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform duration-300" />
-              </button>
+              </Link>
               
-              <button 
+              <Link 
+                to="/portfolio"
                 className="group bg-white/10 hover:bg-white/20 text-white font-semibold py-5 px-8 rounded-xl border border-white/20 flex items-center gap-3 transition-all duration-300 backdrop-blur-sm hover:border-white/40"
                 aria-label="View our portfolio of custom home projects"
               >
@@ -70,11 +73,11 @@ export function Hero() {
                 <div className="w-6 h-6 rounded-full border-2 border-white/40 group-hover:border-white/60 transition-colors duration-300 flex items-center justify-center">
                   <ChevronDown size={12} className="group-hover:translate-y-0.5 transition-transform duration-300" />
                 </div>
-              </button>
+              </Link>
             </div>
             
             {/* Quick stats */}
-            <div className="flex items-center gap-8 pt-4">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8 pt-4 pb-20 sm:pb-4">
               <div className="flex items-center gap-2">
                 <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse" />
                 <span className="text-gray-300 text-sm">Available for Consultation</span>
@@ -133,51 +136,43 @@ export function Hero() {
       </div>
 
       {/* Bottom trust badges */}
-      <div className="absolute bottom-8 left-0 right-0 z-20">
+      <div className="absolute bottom-4 sm:bottom-8 left-0 right-0 z-20">
         <div className="container mx-auto px-6">
-          <div className="flex flex-wrap items-center justify-center gap-8 bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-2xl max-w-5xl mx-auto shadow-xl">
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-8 bg-white/10 backdrop-blur-md border border-white/20 p-4 sm:p-6 rounded-2xl max-w-5xl mx-auto shadow-xl">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-yellow-500/20 rounded-full flex items-center justify-center">
-                <Star className="text-yellow-400 fill-yellow-400" size={18} />
+              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-yellow-500/20 rounded-full flex items-center justify-center">
+                <Star className="text-yellow-400 fill-yellow-400" size={16} />
               </div>
               <div>
-                <p className="text-white font-bold">5.0</p>
-                <p className="text-gray-300 text-sm">128 Reviews</p>
+                <p className="text-white font-bold text-sm sm:text-base">5.0</p>
+                <p className="text-gray-300 text-xs sm:text-sm">128 Reviews</p>
               </div>
             </div>
             
-            <div className="h-12 w-px bg-white/20" />
+            <div className="h-8 sm:h-12 w-px bg-white/20" />
             
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-primary-500/20 rounded-full flex items-center justify-center">
-                <Home className="text-primary-400" size={18} />
+              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-primary-500/20 rounded-full flex items-center justify-center">
+                <Home className="text-primary-400" size={16} />
               </div>
               <div>
-                <p className="text-white font-bold">200+</p>
-                <p className="text-gray-300 text-sm">Homes Built</p>
+                <p className="text-white font-bold text-sm sm:text-base">200+</p>
+                <p className="text-gray-300 text-xs sm:text-sm">Homes Built</p>
               </div>
             </div>
             
-            <div className="h-12 w-px bg-white/20" />
+            <div className="h-8 sm:h-12 w-px bg-white/20" />
             
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-blue-500/20 rounded-full flex items-center justify-center">
-                <Award className="text-blue-400" size={18} />
+              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-blue-500/20 rounded-full flex items-center justify-center">
+                <Award className="text-blue-400" size={16} />
               </div>
               <div>
-                <p className="text-white font-bold">20+</p>
-                <p className="text-gray-300 text-sm">Years Experience</p>
+                <p className="text-white font-bold text-sm sm:text-base">20+</p>
+                <p className="text-gray-300 text-xs sm:text-sm">Years Experience</p>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      
-      {/* Scroll indicator */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20">
-        <div className="flex flex-col items-center gap-2 text-white/60 animate-bounce">
-          <span className="text-xs uppercase tracking-wider">Scroll</span>
-          <ChevronDown size={16} />
         </div>
       </div>
     </section>

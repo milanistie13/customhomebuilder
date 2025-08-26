@@ -1,3 +1,58 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom styles for better responsive behavior */
+@layer base {
+  /* Ensure no horizontal overflow on body and html */
+  html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+  
+  /* Ensure root element doesn't overflow */
+  #root {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+}
+
+@layer components {
+  /* Ensure select elements don't overflow their containers */
+  select {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Prevent horizontal scrolling on mobile */
+  .container {
+    overflow-x: hidden;
+  }
+  
+  /* Ensure filters section is properly contained */
+  .filters-section {
+    min-height: 0;
+    overflow: visible;
+  }
+  
+  /* Better mobile handling for grid layouts */
+  @media (max-width: 640px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Enhanced spacing for page hero sections */
+  .hero-section {
+    padding-top: 8rem; /* Increased from py-20 (5rem) to 8rem */
+    padding-bottom: 5rem;
+  }
+  
+  /* Responsive hero section spacing */
+  @media (max-width: 768px) {
+    .hero-section {
+      padding-top: 6rem; /* Slightly less on mobile but still better than before */
+      padding-bottom: 4rem;
+    }
+  }
+}

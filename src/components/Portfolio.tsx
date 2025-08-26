@@ -1,5 +1,14 @@
 import { useState } from 'react'
 import { ExternalLink, MapPin, Square, Bed, Bath, Expand } from 'lucide-react'
+import { Link } from 'react-router-dom'
+
+// Import images
+import portfolioImage1 from '../assets/images/portfolio/pexels-photo-106399.jpeg'
+import portfolioImage2 from '../assets/images/portfolio/pexels-photo-323780.jpeg'
+import portfolioImage3 from '../assets/images/portfolio/pexels-photo-2581922.jpeg'
+import portfolioImage4 from '../assets/images/portfolio/pexels-photo-1571460.jpeg'
+import portfolioImage5 from '../assets/images/portfolio/pexels-photo-1643383.jpeg'
+import portfolioImage6 from '../assets/images/portfolio/pexels-photo-280229.jpeg'
 
 interface Project {
   id: number
@@ -23,7 +32,7 @@ const projects: Project[] = [
     sqft: 4200,
     bedrooms: 5,
     bathrooms: 4.5,
-    image: "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg",
+    image: portfolioImage1,
     featured: true,
     description: "A stunning modern home with panoramic hill country views, featuring floor-to-ceiling windows and sustainable materials."
   },
@@ -35,7 +44,7 @@ const projects: Project[] = [
     sqft: 3800,
     bedrooms: 4,
     bathrooms: 3.5,
-    image: "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg",
+    image: portfolioImage2,
     featured: true,
     description: "Beautifully restored historic home with modern amenities while preserving original architectural details."
   },
@@ -47,7 +56,7 @@ const projects: Project[] = [
     sqft: 5200,
     bedrooms: 6,
     bathrooms: 5.5,
-    image: "https://images.pexels.com/photos/2581922/pexels-photo-2581922.jpeg",
+    image: portfolioImage3,
     featured: true,
     description: "Luxury waterfront property with private dock, infinity pool, and expansive outdoor living spaces."
   },
@@ -59,7 +68,7 @@ const projects: Project[] = [
     sqft: 2800,
     bedrooms: 3,
     bathrooms: 2.5,
-    image: "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg",
+    image: portfolioImage4,
     featured: false,
     description: "Industrial-chic loft conversion in the heart of downtown, featuring exposed brick and modern finishes."
   },
@@ -71,7 +80,7 @@ const projects: Project[] = [
     sqft: 4500,
     bedrooms: 5,
     bathrooms: 4,
-    image: "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg",
+    image: portfolioImage5,
     featured: false,
     description: "Modern farmhouse design with wrap-around porches, custom millwork, and energy-efficient features."
   },
@@ -83,7 +92,7 @@ const projects: Project[] = [
     sqft: 3200,
     bedrooms: 4,
     bathrooms: 3,
-    image: "https://images.pexels.com/photos/280229/pexels-photo-280229.jpeg",
+    image: portfolioImage6,
     featured: false,
     description: "LEED-certified sustainable home with solar panels, rainwater collection, and native landscaping."
   }
@@ -195,12 +204,13 @@ export function Portfolio() {
 
         {/* CTA */}
         <div className="text-center">
-          <button 
-            className="bg-primary-500 hover:bg-primary-600 text-white font-semibold py-4 px-8 rounded-lg flex items-center gap-2 transition-all duration-300 transform hover:scale-105 mx-auto"
+          <Link 
+            to="/portfolio"
+            className="bg-primary-500 hover:bg-primary-600 text-white font-semibold py-4 px-8 rounded-lg inline-flex items-center gap-2 transition-all duration-300 transform hover:scale-105 mx-auto"
             aria-label="View our complete portfolio of custom home projects"
           >
             View Full Portfolio <ExternalLink size={20} />
-          </button>
+          </Link>
         </div>
       </div>
 
@@ -257,12 +267,13 @@ export function Portfolio() {
                 </div>
               </div>
               
-              <button 
-                className="w-full bg-primary-500 hover:bg-primary-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+              <Link 
+                to="/contact"
+                className="w-full bg-primary-500 hover:bg-primary-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors inline-block text-center"
                 aria-label="Schedule a tour of this custom home"
               >
                 Schedule a Tour of This Home
-              </button>
+              </Link>
             </div>
           </div>
         </div>

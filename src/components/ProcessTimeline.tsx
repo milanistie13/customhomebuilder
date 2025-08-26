@@ -68,7 +68,7 @@ const ProcessTimeline: React.FC = () => {
               </div>
 
               {index < processSteps.length - 1 && (
-                <div className="absolute left-8 top-16 w-0.5 h-16 bg-purple-300 ml-7 mt-16"></div>
+                <div className="absolute left-8 top-16 w-0.5 h-16 ml-7 mt-16"></div>
               )}
             </div>
           ))}

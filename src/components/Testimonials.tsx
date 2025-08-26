@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Star, Quote, ChevronLeft, ChevronRight } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 // Import all local images
 import sarahMichaelImage from '../assets/images/testimonials/pexels-photo-774909.jpeg'
@@ -240,12 +241,13 @@ export function Testimonials() {
 
         {/* CTA */}
         <div className="text-center mt-16">
-          <button 
-            className="bg-primary-500 hover:bg-primary-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 mx-auto"
+          <Link 
+            to="/about"
+            className="bg-primary-500 hover:bg-primary-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 mx-auto inline-block"
             aria-label="Read more customer reviews and testimonials"
           >
             Read More Reviews
-          </button>
+          </Link>
         </div>
       </div>
     </section>

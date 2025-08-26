@@ -1,4 +1,13 @@
 import { Building, Hammer, Ruler, Paintbrush, Wrench, Lightbulb } from 'lucide-react'
+import { Link } from 'react-router-dom'
+
+// Import images
+import serviceImage1 from '../assets/images/services/pexels-photo-106399.jpeg'
+import serviceImage2 from '../assets/images/services/pexels-photo-1571460.jpeg'
+import serviceImage3 from '../assets/images/services/pexels-photo-1643383.jpeg'
+import serviceImage4 from '../assets/images/services/pexels-photo-1457842.jpeg'
+import serviceImage5 from '../assets/images/services/pexels-photo-943150.jpeg'
+import serviceImage6 from '../assets/images/services/pexels-photo-2219024.jpeg'
 
 const services = [
   {
@@ -6,42 +15,42 @@ const services = [
     title: "Custom Home Construction",
     description: "From concept to completion, we build bespoke homes tailored to your lifestyle and preferences.",
     features: ["Architectural Design", "3D Visualization", "Material Selection", "Project Management"],
-    image: "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg"
+    image: serviceImage1
   },
   {
     icon: Hammer,
     title: "Home Remodeling",
     description: "Transform your existing space with our expert remodeling services and attention to detail.",
     features: ["Kitchen Renovations", "Bathroom Updates", "Room Additions", "Structural Changes"],
-    image: "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg"
+    image: serviceImage2
   },
   {
     icon: Ruler,
     title: "Architectural Design",
     description: "Collaborative design process creating functional, beautiful spaces that reflect your vision.",
     features: ["Floor Plan Development", "3D Renderings", "Material Specifications", "Permit Assistance"],
-    image: "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg"
+    image: serviceImage3
   },
   {
     icon: Paintbrush,
     title: "Interior Finishing",
     description: "Premium finishes and custom details that elevate your home's aesthetic and functionality.",
     features: ["Custom Millwork", "Premium Flooring", "Lighting Design", "Hardware Selection"],
-    image: "https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg"
+    image: serviceImage4
   },
   {
     icon: Wrench,
     title: "Smart Home Integration",
     description: "Seamless integration of modern technology for comfort, security, and energy efficiency.",
     features: ["Home Automation", "Security Systems", "Energy Management", "Audio/Visual"],
-    image: "https://images.pexels.com/photos/943150/pexels-photo-943150.jpeg"
+    image: serviceImage5
   },
   {
     icon: Lightbulb,
     title: "Sustainable Building",
     description: "Eco-friendly construction practices and materials for a healthier, more efficient home.",
     features: ["Energy Star Certified", "Solar Ready", "Water Conservation", "Green Materials"],
-    image: "https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg"
+    image: serviceImage6
   }
 ]
 
@@ -101,12 +110,13 @@ export function Services() {
                   ))}
                 </div>
                 
-                <button 
-                  className="mt-8 w-full bg-primary-500 hover:bg-primary-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
+                <Link 
+                  to="/services"
+                  className="mt-8 w-full bg-primary-500 hover:bg-primary-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 inline-block text-center"
                   aria-label={`Learn more about ${service.title} services`}
                 >
                   Learn More
-                </button>
+                </Link>
               </div>
             </div>
           ))}
@@ -121,18 +131,20 @@ export function Services() {
             Schedule a free consultation with our team to discuss your vision and how we can bring it to life.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button 
-              className="bg-primary-500 hover:bg-primary-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+            <Link 
+              to="/contact"
+              className="bg-primary-500 hover:bg-primary-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 inline-block text-center"
               aria-label="Schedule a free consultation for your custom home project"
             >
               Schedule Consultation
-            </button>
-            <button 
-              className="bg-white hover:bg-gray-50 text-gray-900 font-semibold py-4 px-8 rounded-lg border border-primary-200 transition-all duration-300"
+            </Link>
+            <Link 
+              to="/process"
+              className="bg-white hover:bg-gray-50 text-gray-900 font-semibold py-4 px-8 rounded-lg border border-primary-200 transition-all duration-300 inline-block text-center"
               aria-label="View our step-by-step home building process"
             >
               View Our Process
-            </button>
+            </Link>
           </div>
         </div>
       </div>
